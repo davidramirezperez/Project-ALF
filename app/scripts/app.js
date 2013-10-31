@@ -7,6 +7,10 @@ angular.module('alfApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/mapping', {
+        templateUrl: 'views/mapping.html',
+        controller: 'MappingCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

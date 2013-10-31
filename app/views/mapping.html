@@ -1,0 +1,10 @@
+
+<p>This is the mapping view.</p>
+<div id="mappingHolder" style="width:{{Mapping.parent.w}}px;height:{{Mapping.parent.h}}px;">
+  <div class="overlay">
+    <div ng-repeat="rect in Mapping.rectangles" style="left:{{rect.x}}px;top:{{rect.y}}px;width:{{rect.w}}px;height:{{rect.h}}px;background:{{rect.c}};z-index:{{rect.z}};" ng-click="addOnClick($event,$index,'rect')" class="rect">ov-{{$index}}</div>
+  </div>
+  <div class="pictures">
+    <div ng-repeat="rect in Mapping.rectangles" ng-class="{show:rect.show,hide:!rect.show}" style="background:{{rect.url}};z-index:{{rect.z}};" class="img">img-{{$index}}</div>
+  </div>
+</div>

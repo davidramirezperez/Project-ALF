@@ -1,0 +1,6 @@
+p This is the mapping view.
+div#mappingHolder(style="width:{{Mapping.parent.w}}px;height:{{Mapping.parent.h}}px;")
+    div.overlay
+        div.rect(ng-repeat="rect in Mapping.rectangles",style="left:{{rect.x}}px;top:{{rect.y}}px;width:{{rect.w}}px;height:{{rect.h}}px;background:{{rect.c}};z-index:{{rect.z}};",ng-click="addOnClick($event,$index,'rect')") ov-{{$index}}
+    div.pictures
+        div.img(ng-repeat="rect in Mapping.rectangles",ng-class="{show:rect.show,hide:!rect.show}",style="background:{{rect.url}};z-index:{{rect.z}};") img-{{$index}}
