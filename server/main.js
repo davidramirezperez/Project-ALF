@@ -11,8 +11,13 @@ app.get('/api/awesomeThings', routes.awesomeThings);
 
 app.get('/api/mapping/:id', mapping.mappingById);
 
+app.post('/api/photos', mapping.picture);
+
 app.use(function (req, res) {
-    res.json({'ok': false, 'status': '404'});
+    res.json({
+        'ok': false,
+        'status': '404'
+    });
 });
 
 module.exports = app;

@@ -36,4 +36,24 @@ angular.module('alfApp').controller('MappingCtrl', function ($scope, $http) {
         $scope.Mapping.rectangles[ev.index].show = true;
 
     }
+
+
+    $scope.results = function (content, completed) {
+        if (completed && content.length > 0) {
+            console.log(content); // process content
+            console.log(completed); // process content
+            $scope.uploadResponse = " Uploaded";
+            $scope.file = "";
+        } else {
+            // 1. ignore content and adjust your model to show/hide UI snippets; or
+            // 2. show content as an _operation progress_ information
+        }
+    }
+
+
+
+
+
+
+
 });

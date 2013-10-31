@@ -1,4 +1,11 @@
 
+<hr/>
+<form action="/api/photos" ng-upload="ng-upload">
+  <input type="file" name="file" ng-model="file"/><br/>
+  <input type="button" value="Upload" upload-submit="results(content, completed)"/>
+  <div class="alert alert-info">Server Response {{uploadResponse}}</div>
+</form>
+<hr/>
 <p>This is the mapping view.</p>
 <div id="mappingHolder" style="width:{{Mapping.parent.w}}px;height:{{Mapping.parent.h}}px;">
   <div class="overlay">

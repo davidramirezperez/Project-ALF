@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('alfApp', [])
+angular.module('alfApp', ['ngUpload'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -15,3 +15,4 @@ angular.module('alfApp', [])
         redirectTo: '/'
       });
   });
+ 

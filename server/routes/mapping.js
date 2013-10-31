@@ -1,4 +1,28 @@
 'use strict';
+
+exports.picture = function (req, res) {
+    
+    var hash = require("crypto").createHash("md5").update(req.files.file.lastModifiedDate+"").digest("hex");
+    var serverPath = process.cwd() + "/app/images/" + hash + "_" + req.files.file.name;
+
+    require('fs').rename(req.files.file.path, serverPath, function (error) {
+        if (error) {
+            res.send({
+                error: 'Ah crap! Something bad happened'
+            });
+            return;
+        }
+        res.send({
+            path: serverPath
+        });
+    });
+
+
+
+    //res.send("ok");
+
+};
+
 exports.mappingById = function (req, res) {
     //var id = req.params.id;
 
@@ -15,8 +39,8 @@ exports.mappingById = function (req, res) {
             h: 100,
             c: "#1abc9c",
             z: 1,
-            url:"#1abc9c",
-            show:true
+            url: "#1abc9c",
+            show: true
         }, {
             x: 100,
             y: 0,
@@ -24,8 +48,8 @@ exports.mappingById = function (req, res) {
             h: 100,
             c: "#3498db",
             z: 2,
-            url:"#3498db",
-            show:false
+            url: "#3498db",
+            show: false
         }, {
             x: 0,
             y: 100,
@@ -33,8 +57,8 @@ exports.mappingById = function (req, res) {
             h: 100,
             c: "#e67e22",
             z: 3,
-            url:"#e67e22",
-            show:false
+            url: "#e67e22",
+            show: false
         }, {
             x: 100,
             y: 100,
@@ -42,8 +66,8 @@ exports.mappingById = function (req, res) {
             h: 100,
             c: "#8e44ad",
             z: 4,
-            url:"#8e44ad",
-            show:false
+            url: "#8e44ad",
+            show: false
         }, {
             x: 50,
             y: 50,
@@ -51,8 +75,8 @@ exports.mappingById = function (req, res) {
             h: 100,
             c: "#bdc3c7",
             z: 5,
-            url:"#bdc3c7",
-            show:false
+            url: "#bdc3c7",
+            show: false
         }),
         circles: new Array(1, 2, 3, 4)
     };
