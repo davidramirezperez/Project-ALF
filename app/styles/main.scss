@@ -70,5 +70,35 @@ body {
                 opacity:0;
             }
         }
+    background: #999;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+.img-container{
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    width: 600px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.33);
+    img{
+        position: absolute;
+        width: 100%;
+
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    h1{
+        position: absolute;
+        background: rgba(black, 0.75);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.33);
+        padding: 20px 20px;
+        z-index: 99;
+        text-transform: capitalize;
+        color: white;
+        bottom: 10%;
+        width: 70%;
+        text-align: right;
     }
 }
