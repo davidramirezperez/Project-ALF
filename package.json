@@ -2,7 +2,8 @@
   "name": "alf",
   "version": "0.0.0",
   "dependencies": {
-    "MD5":"1.1.0"
+    "MD5": "~1.1.0",
+    "gm": "~1.13.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
