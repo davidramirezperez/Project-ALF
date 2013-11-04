@@ -2,7 +2,7 @@
 
 angular.module('alfApp').controller('MappingCtrl', function ($scope, $http) {
 
-    $scope.id = 1;
+    $scope.id = 2;
     $scope.Mapping = "";
     $scope.lastSelectionIndex = 0;
 
