@@ -11,6 +11,10 @@ angular.module('alfApp', ['ngUpload'])
         templateUrl: 'views/mapping.html',
         controller: 'MappingCtrl'
       })
+      .when('/backend', {
+        templateUrl: 'views/backend.html',
+        controller: 'BackendCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
